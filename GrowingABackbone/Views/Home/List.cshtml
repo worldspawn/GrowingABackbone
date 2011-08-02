@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "List";
+}
+
+<script type="text/javascript">
+  var x = true;
+
+  var DataBindConvention = {
+    selector: "*[data-bind]",
+    handler: {
+      bind: function (selector, view, model) {
+        view.$(selector).each(function (index) {
+          var element = view.$(this);
+          var databind = element.attr("data-bind").split(" ");
+          var elementAttr = databind[0];
+          var modelAttr = databind[1];
+
+          var binder = function (changedModel, val) {
+            switch (elementAttr) {
+              case "html":
+                element.html(val);
+                break;
+              case "text":
+                element.text(val);
+                break;
+              default:
+                element.attr(elementAttr, val);
+            }
+          };
+          model.bind("change:" + modelAttr, binder);
+          binder(model, model.attributes[modelAttr]);
+        });
+      }
+    }
+  };
+
+  Backbone.ModelBinding.Conventions.dataBind = DataBindConvention;
+</script>
+
+<script type="text/javascript">
+  window.Models = {};
+  window.Views = {};
+  window.Collections = {};
+
+  $(function () {
+    Models.Game = Backbone.Model.extend({
+      defaults: {
+        name: 'New Game',
+        isWatched: false
+      }
+    });
+
+    Collections.GameCollection = Backbone.Collection.extend({
+      model: Models.Game
+    });
+
+    Views.GameCollection = Backbone.View.extend({
+      initialize: function () {
+        var _this = this;
+        _this._views = [];
+
+        _this.collection.each(function (model) {
+          _this._views.push(new Views.GameRow({
+            model: model
+          }));
+        });
+      },
+      render: function () {
+        var _this = this;
+        $(_this.el).empty();
+        this.el.append(_.template($('#GameCollection_template').html(), this.model));
+
+        var tbody = $(_this.el).find('table tbody');
+        _(_this._views).each(function (v) {
+          tbody.append(v.render().el);
+        });
+
+        return this;
+      }
+    });
+
+    Views.GameRow = Backbone.View.extend({
+      isRendered: false,
+      render: function () {
+        var rendering = $(_.template($('#GameRow_template').html(), this.model.toJSON()));
+        if (!this.isRendered) {
+          this.el = rendering;
+          this.isRendered = !this.isRendered;
+        }
+        else {
+          $(this.el).replaceWith(rendering);
+          this.el = rendering;
+        }
+
+        Backbone.ModelBinding.call(this);
+        this.delegateEvents();
+        return this;
+      },
+      events: {
+        'click .watchlist': 'watchListToggle'
+      },
+      watchListToggle: function () {
+        var isWatched = this.model.get('isWatched');
+        this.model.set({ isWatched: !isWatched });
+        this.render();
+      }
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $(function () {
+    var games = new Collections.GameCollection([
+      { name: 'Portal 2' },
+      { name: 'Star Wars: Knights of the Old Republic' }
+    ]);
+
+    var gameCollectionView = new Views.GameCollection({
+      collection: games,
+      el: $('#container')
+    });
+
+    gameCollectionView.render();
+  });
+</script>
+
+<div id="container">
+  
+</div>
+
+<script type="text/template" id="GameCollection_template">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+</script>
+
+<script type="text/template" id="GameRow_template">
+<tr>
+  <td class="name" data-bind="text name"></td>
+  <td class="watchlist">
+    <button><%= isWatched ? 'Unwatch' : 'Watch' %></button>
+  </td>
+</tr>
+</script>

@@ -1,0 +1,103 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+  var DataBindConvention = {
+    selector: "*[data-bind]",
+    handler: {
+      bind: function (selector, view, model) {
+        console.log(selector);
+        view.$(selector).each(function (index) {
+          var element = view.$(this);
+          var databind = element.attr("data-bind").split(" ");
+          var elementAttr = databind[0];
+          var modelAttr = databind[1];
+
+          var binder = function (changedModel, val) {
+            switch (elementAttr) {
+              case "html":
+                element.html(val);
+                break;
+              case "text":
+                element.text(val);
+                break;
+              default:
+                element.attr(elementAttr, val);
+            }
+          };
+          model.bind("change:" + modelAttr, binder);
+          binder(model, model.attributes[modelAttr]);
+        });
+      }
+    }
+  };
+
+  Backbone.ModelBinding.Conventions.dataBind = DataBindConvention;
+</script>
+<script type="text/javascript">
+  $(function () {
+    var Game = Backbone.Model.extend({
+      initialize: function () {
+        //alert('Oh hey1!');
+      },
+      defaults: {
+        name: 'Default title',
+        releaseDate: 2011,
+        funk : null
+      },
+      url: '/game'
+    });
+
+    var GameCollection = Backbone.Collection.extend({ model: Game, url: '/games' });
+
+    var GameView = Backbone.View.extend({
+      render: function () {
+        //$(this.el).html(this.model.get('name'));
+        //console.log(this);
+        //var template = _.template($('#game_template').html(), this.model.toJSON());
+        //this.el.html(template);
+        Backbone.ModelBinding.call(this);
+      },
+      events: {
+        'click .name': 'handleClick'
+      },
+      handleClick: function () {
+        alert('Mmm... games');
+      },
+      initialize: function (args) {
+        this.render();
+      }
+    });
+
+
+    var portal = new Game({ name: 'Portal 2', releaseDate: 2011 });
+    var release = portal.get('releaseDate');
+    portal.set({ name: 'Portal 2 by Valve' });
+    portal.set({ funk: 'is funky' });
+    //portal.save();
+    //console.log(release);
+
+    var game_view = new GameView({ el: '#testbox', model: portal });
+
+    window.portal = portal;
+
+  });
+</script>
+
+<div style="border: solid 1px red">
+  <div id="testbox">
+    <div data-bind="text funk"></div>
+    <div data-bind="text name" class="name"></div>
+  </div>
+</div>
+
+<button type="button" onclick="portal.set({ name: new Date().toString() });"></button>
+
+<script type="text/template" id="game_template">
+  <div id="name"><%= name %></div>
+  <div data-bind="text name"></div>
+</script>

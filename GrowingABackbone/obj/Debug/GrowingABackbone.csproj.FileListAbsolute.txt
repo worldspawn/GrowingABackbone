@@ -1,0 +1,5 @@
+c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\bin\GrowingABackbone.dll
+c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\bin\GrowingABackbone.pdb
+c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\obj\Debug\ResolveAssemblyReference.cache
+c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\obj\Debug\GrowingABackbone.dll
+c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\obj\Debug\GrowingABackbone.pdb

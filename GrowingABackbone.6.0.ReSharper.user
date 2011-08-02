@@ -1,0 +1,197 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/f:packages.config" caret="0" fromTop="0" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/f:Web.config" caret="367" fromTop="10" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Shared/f:_Layout.cshtml" caret="549" fromTop="10" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Shared/f:Error.cshtml" caret="207" fromTop="14" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Scripts/f:backbone.modelbinding.js" caret="0" fromTop="0" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Scripts/f:underscore.js" caret="16506" fromTop="40" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:HomeController.cs" caret="421" fromTop="21" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:Index.cshtml" caret="2056" fromTop="36" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="2414" fromTop="0" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="1441" fromTop="17" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="1043" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="3002" fromTop="35" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="507" fromTop="18" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="965" fromTop="39" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="1883" fromTop="33" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="2734" fromTop="25" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="965" fromTop="19" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:Index.cshtml" caret="2067" fromTop="23" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="2029" fromTop="16" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="2580" fromTop="30" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="2799" fromTop="40" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="2826" fromTop="14" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="3641" fromTop="32" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="2863" fromTop="40" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Home/f:List.cshtml" caret="3431" fromTop="37" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="3799" fromTop="49" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="1671" fromTop="27" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="1132" fromTop="24" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="1292" fromTop="13" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="3730" fromTop="29" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="3333" fromTop="39" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="3333" fromTop="35" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="3095" fromTop="33" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="3336" fromTop="38" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="2927" fromTop="33" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Views/d:Game/f:Index.cshtml" caret="1441" fromTop="17" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="316" fromTop="14" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="303" fromTop="13" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="797" fromTop="29" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="1654" fromTop="45" />
+      <File id="AE9D748D-0180-4B85-854E-D4DD42E70786/d:Controllers/f:GameController.cs" caret="1476" fromTop="33" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="Error.cshtml" priority="18" />
+      <Item value="public" priority="222" />
+      <Item value="ActionResult`0" priority="31" />
+      <Item value="Guid`0" priority="95" />
+      <Item value="class" priority="30" />
+      <Item value="IDependencyResolver`0" priority="31" />
+      <Item value="string" priority="31" />
+      <Item value="static" priority="30" />
+      <Item value="new" priority="62" />
+      <Item value="Game" priority="27" />
+      <Item value="Id" priority="30" />
+      <Item value="Name" priority="31" />
+      <Item value="if" priority="31" />
+      <Item value="gameId" priority="63" />
+      <Item value="return" priority="127" />
+      <Item value="Json`0" priority="95" />
+      <Item value="games" priority="223" />
+      <Item value="FirstOrDefault`1" priority="26" />
+      <Item value="g" priority="31" />
+      <Item value="HttpGet" priority="31" />
+      <Item value="Action`0" priority="31" />
+      <Item value="Game`0" priority="31" />
+      <Item value="EmptyResult" priority="28" />
+      <Item value="View`0" priority="31" />
+      <Item value="First`1" priority="53" />
+      <Item value="var" priority="31" />
+      <Item value="p" priority="31" />
+      <Item value="ToList`1" priority="26" />
+      <Item value="game" priority="31" />
+      <Item value="bool" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="script" priority="31" />
+      <Item value="type" priority="36" />
+      <Item value="text/C#" priority="23" />
+      <Item value="div" priority="29" />
+      <Item value="id" priority="17" />
+      <Item value="game_template" priority="11" />
+      <Item value="style" priority="6" />
+      <Item value="border" priority="8" />
+      <Item value="button" priority="11" />
+      <Item value="onclick" priority="5" />
+      <Item value="class" priority="5" />
+      <Item value="editor-label" priority="5" />
+      <Item value="text/javascript" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContext">
+      <Item value="var" priority="197" />
+      <Item value="function" priority="208" />
+      <Item value="alert" priority="32" />
+      <Item value="new" priority="76" />
+      <Item value="Game" priority="32" />
+      <Item value="portal" priority="21" />
+      <Item value="$" priority="99" />
+      <Item value="console" priority="175" />
+      <Item value="this" priority="296" />
+      <Item value="_Event" priority="43" />
+      <Item value="GameView" priority="10" />
+      <Item value="HTMLOptionsCollection" priority="10" />
+      <Item value="args" priority="10" />
+      <Item value="databind" priority="10" />
+      <Item value="elementAttr" priority="10" />
+      <Item value="model" priority="65" />
+      <Item value="binder" priority="10" />
+      <Item value="window" priority="10" />
+      <Item value="ex" priority="10" />
+      <Item value="Views" priority="43" />
+      <Item value="Models" priority="21" />
+      <Item value="_this" priority="76" />
+      <Item value="v" priority="10" />
+      <Item value="Collections" priority="10" />
+      <Item value="tbody" priority="10" />
+      <Item value="element" priority="21" />
+      <Item value="modelAttr" priority="10" />
+      <Item value="true" priority="10" />
+      <Item value="if" priority="21" />
+      <Item value="x" priority="21" />
+      <Item value="view" priority="10" />
+      <Item value="null" priority="21" />
+      <Item value="undefined" priority="10" />
+      <Item value="false" priority="10" />
+      <Item value="rendering" priority="21" />
+      <Item value="else" priority="10" />
+      <Item value="return" priority="10" />
+      <Item value="games" priority="21" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContextQualified">
+      <Item value="extend" priority="44" />
+      <Item value="get" priority="28" />
+      <Item value="set" priority="8" />
+      <Item value="log" priority="152" />
+      <Item value="html" priority="8" />
+      <Item value="bindAll" priority="17" />
+      <Item value="template" priority="17" />
+      <Item value="toJSON" priority="9" />
+      <Item value="ModelBinding" priority="8" />
+      <Item value="Game" priority="17" />
+      <Item value="_views" priority="8" />
+      <Item value="push" priority="8" />
+      <Item value="GameRow" priority="8" />
+      <Item value="append" priority="8" />
+      <Item value="GameCollection" priority="17" />
+      <Item value="text" priority="8" />
+      <Item value="each" priority="9" />
+      <Item value="replaceWith" priority="9" />
+      <Item value="el" priority="8" />
+      <Item value="constructor" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="CssCodeCompletionContext">
+      <Item value="testbox" priority="4" />
+      <Item value="border" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GrowingABackbone.Controllers.Game">
+      <Item value="Id" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.JsonRequestBehavior">
+      <Item value="AllowGet" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="IndexOf`0" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>
