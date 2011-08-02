@@ -1,0 +1,8 @@
+
+*.suo
+_ReSharper.*
+*.user
+Thumbs.db
+_FileCache
+
+*.Publish.xml
