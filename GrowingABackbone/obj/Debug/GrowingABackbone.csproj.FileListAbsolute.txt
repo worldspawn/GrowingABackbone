@@ -3,3 +3,8 @@ c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\Gr
 c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\obj\Debug\ResolveAssemblyReference.cache
 c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\obj\Debug\GrowingABackbone.dll
 c:\users\sam.critchley\documents\visual studio 2010\Projects\GrowingABackbone\GrowingABackbone\obj\Debug\GrowingABackbone.pdb
+C:\projects\GrowingABackbone\GrowingABackbone\bin\GrowingABackbone.dll
+C:\projects\GrowingABackbone\GrowingABackbone\bin\GrowingABackbone.pdb
+C:\projects\GrowingABackbone\GrowingABackbone\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\GrowingABackbone\GrowingABackbone\obj\Debug\GrowingABackbone.dll
+C:\projects\GrowingABackbone\GrowingABackbone\obj\Debug\GrowingABackbone.pdb

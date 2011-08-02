@@ -38,17 +38,61 @@
 </script>
 
 <script type="text/javascript">
+  window.Routers = {};
   window.Models = {};
   window.Views = {};
   window.Collections = {};
 
+  window.createUUID = function(){
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
+  };
+
   $(function () {
+    Routers.Game = Backbone.Router.extend({
+      initialize: function(options){
+        //bindAll(this, 'index');
+        this.vent = options.vent;
+        this.vent.bind('Router.redirectTo', _.bind(this.redirectTo, this));
+      },
+      routes: {
+        'add': 'add',
+        '*actions': 'index'
+      },
+      redirectTo: function(target){
+        console.log('?', target, arguments);
+        this.navigate(target, true);
+      },
+      add: function(){
+        var model = new Models.Game();
+        var addView = this.views['add'] || (this.views['add'] = new Views.GameAdd({el: $('#container'), vent: this.vent}));
+        addView.model = model;
+        addView.render();
+      },
+      index: function () {        
+        var games = new Collections.GameCollection();
+        games.fetch({
+          success: function (collection, response) {
+            var gameCollectionView = new Views.GameCollection({
+              collection: collection,
+              el: $('#container')
+            });
+
+            gameCollectionView.render();
+          }
+        });
+      },
+      views: {}
+    });
+
     Models.Game = Backbone.Model.extend({
       defaults: {
         Name: 'New Game',
-        Id: null,
         IsWatched: false
-      }
+      },
+      url: '/game/data'
     });
 
     Collections.GameCollection = Backbone.Collection.extend({
@@ -99,13 +143,43 @@
         return this;
       },
       events: {
-        'click .watchlist': 'watchListToggle'
+        'click .watchlist': 'watchListToggle',
+        'click .delete': 'deleteGame',
       },
       watchListToggle: function () {
         var IsWatched = this.model.get('IsWatched');
         this.model.set({ IsWatched: !IsWatched });
-        this.render();
         this.model.save();
+        this.render();        
+      },
+      deleteGame: function(){
+        this.model.destroy({
+          success: function(){console.log('deleted');}, 
+          error: function(){console.log('fail');}, 
+        });        
+      }
+    });
+
+    Views.GameAdd = Backbone.View.extend({
+      render: function(){
+        $(this.el).empty();
+        this.el.append(_.template($('#GameAdd_template').html(), this.model));
+      },
+      events: {
+        'click .cancel': 'cancel',
+        'click .save': 'save',
+      },
+      cancel: function(){
+        this.vent.trigger('Router.redirectTo', '');
+      },
+      save: function(){
+        this.model.save(null, {
+            success:_.bind(function(model){
+              this.vent.trigger('Router.redirectTo', '');
+            }, this)});        
+      },
+      initialize: function(options){
+        this.vent = options.vent;
       }
     });
   });
@@ -113,23 +187,31 @@
 
 <script type="text/javascript">
   $(function () {
-    var games = new Collections.GameCollection();
-    games.fetch({
-      success : function (collection, response) {
-        var gameCollectionView = new Views.GameCollection({
-          collection: collection,
-          el: $('#container')
-        });
+    var vent = _.extend({}, Backbone.Events);
 
-        gameCollectionView.render();
-      }
-    });
+    var router = new Routers.Game({ vent: vent });
+    Backbone.history.start({ pushState: false });
   });
 </script>
 
 <div id="container">
   
 </div>
+
+<script type="text/template" id="GameAdd_template">
+<form>
+  <legend>Add a game</legend>
+  <fieldset>
+  <ol>
+    <li><input type="text" id="Name" data-bind="value Name" /></li>
+  </ol>
+  </fieldset>
+  <fieldset>
+    <button class="save" type="button">Save</button>
+    <button class="cancel" type="button">Cancel</button>
+  </fieldset>
+</form>
+</script>
 
 <script type="text/template" id="GameCollection_template">
 <table>
@@ -140,9 +222,9 @@
     </tr>
   </thead>
   <tbody>
-
   </tbody>
 </table>
+<a href="#add">Add</a>
 </script>
 
 <script type="text/template" id="GameRow_template">
@@ -151,5 +233,6 @@
   <td class="watchlist">
     <button><%= IsWatched ? 'Unwatch' : 'Watch' %></button>
   </td>
+  <td><button class="delete">Delete</button></td>
 </tr>
 </script>

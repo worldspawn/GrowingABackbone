@@ -126,7 +126,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\backbone.js" />
-    <Content Include="Scripts\backbone.min.js" />
     <Content Include="Scripts\backbone.modelbinding.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
