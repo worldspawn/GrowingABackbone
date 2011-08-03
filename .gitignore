@@ -6,3 +6,6 @@ Thumbs.db
 _FileCache
 
 *.Publish.xml
+GrowingABackbone/obj
+GrowingABackbone/bin
+GrowingABackbone/*.user
